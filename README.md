@@ -15,5 +15,4 @@
 📌 Features  
 - Fully responsive design for mobile, tablet, and desktop  
 - Smooth navigation and user-friendly interface  
-- Projects section with live previews and GitHub links  
 - Contact form for easy communication  
