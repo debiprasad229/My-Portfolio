@@ -5,7 +5,7 @@
 🔗 [View Portfolio] (https://debi-prasad-portfolio-990.netlify.app/)  
 
 🖼 Preview  
-[Portfolio screenshot:](https://github.com/debiprasad229/My-Portfolio/blob/main/My%20Portfolio/debi-prasad-portfolio-990.netlify.app_.png) 
+[Portfolio screenshot](https://github.com/debiprasad229/My-Portfolio/blob/main/My%20Portfolio/debi-prasad-portfolio-990.netlify.app_.png) 
 
 🛠 Tech Stack  
 - HTML5 – Semantic and accessible structure  
