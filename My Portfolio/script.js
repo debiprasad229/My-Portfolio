@@ -48,11 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optional: Stop observing once it's visible if animation only happens once
-                // observer.unobserve(entry.target);
+       
             } else {
-                // Optional: Remove is-visible class if you want animation to reset on scroll out
-                // entry.target.classList.remove('is-visible');
+
             }
         });
     }, observerOptions);
@@ -102,10 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateNavLinkActiveState(currentActiveSection);
     });
 
-    // Initialize active state on page load based on URL hash (if any)
+
     if (window.location.hash) {
         updateNavLinkActiveState(window.location.hash);
-        // Also scroll to the hash if page reloaded there
+  
         const targetElement = document.querySelector(window.location.hash);
         if (targetElement) {
              const navbarHeight = document.querySelector('.navbar').offsetHeight;
