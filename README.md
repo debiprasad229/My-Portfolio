@@ -2,7 +2,7 @@
 💻 My Personal Portfolio Website – A responsive and visually appealing showcase of my web development projects and technical skils built with modern frontend technologies to reflect my creativity and coding expertise.
 
 🚀 Live Demo  
-🔗 [View Portfolio] (https://name-debi.netlify.app/)  
+🔗 [View Portfolio] (https://name-debi1.netlify.app/)  
 
 🛠 Tech Stack  
 - HTML5 – Semantic and accessible structure  
