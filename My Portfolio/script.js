@@ -36,8 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Intersection Observer for "on-scroll" animations
+    // Intersection Observer for on-scroll animations
     const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+
     const observerOptions = {
         root: null, // viewport
         rootMargin: '0px',
@@ -48,9 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-       
+                // Optional: Stop observing once it's visible if animation only happens once
+                // observer.unobserve(entry.target);
             } else {
-
+                // Optional: Remove 'is-visible' class if you want animation to reset on scroll out
+                // entry.target.classList.remove('is-visible');
             }
         });
     }, observerOptions);
@@ -59,22 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Hero section text and button staggered animation on page load
+    // Hero section text and buttons staggered animation on page load
     const heroTitle = document.querySelector('.hero-title');
     const heroSubtitle = document.querySelector('.hero-subtitle');
-    const heroBtn = document.querySelector('.hero-section .btn');
+    const heroButtons = document.querySelectorAll('.hero-buttons .btn');
 
     // Use a small delay for staggered effect
     setTimeout(() => {
         heroTitle.classList.add('is-visible');
     }, 100);
+
     setTimeout(() => {
         heroSubtitle.classList.add('is-visible');
     }, 300);
-    setTimeout(() => {
-        heroBtn.classList.add('is-visible');
-    }, 500);
 
+    // Animate both hero buttons with slight delay
+    heroButtons.forEach((btn, index) => {
+        setTimeout(() => {
+            btn.classList.add('is-visible');
+        }, 500 + (index * 100));
+    });
 
     // Navbar sticky and background change on scroll
     const navbar = document.querySelector('.navbar');
@@ -90,29 +97,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update active nav link based on scroll position
         let currentActiveSection = '';
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop - navbar.offsetHeight - 50; // Add some offset
             const sectionHeight = section.clientHeight;
+
             if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                 currentActiveSection = '#' + section.id;
             }
         });
+
         updateNavLinkActiveState(currentActiveSection);
     });
 
-
+    // Initialize active state on page load based on URL hash (if any)
     if (window.location.hash) {
         updateNavLinkActiveState(window.location.hash);
-  
+        // Also scroll to the hash if page reloaded there
         const targetElement = document.querySelector(window.location.hash);
         if (targetElement) {
-             const navbarHeight = document.querySelector('.navbar').offsetHeight;
-             const offsetTop = targetElement.offsetTop - navbarHeight;
-             window.scrollTo({ top: offsetTop, behavior: 'instant' }); // Use 'instant' to avoid double scroll
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const offsetTop = targetElement.offsetTop - navbarHeight;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'instant' // Use instant to avoid double scroll
+            });
         }
     } else {
-        // Set 'About' as active if no hash
+        // Set About as active if no hash
         updateNavLinkActiveState('#about');
     }
-
 });
