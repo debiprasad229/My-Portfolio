@@ -230,6 +230,60 @@ ul {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
+/* Experience Section */
+.experience-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.experience-item {
+    display: flex;
+    margin-bottom: 40px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.experience-date {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-right: 20px;
+    align-self: flex-start;
+    min-width: 120px;
+    text-align: center;
+}
+
+.experience-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: var(--header-background);
+}
+
+.experience-content h4 {
+    font-size: 1.1em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.experience-content p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* Projects Section */
 .project-grid {
@@ -401,60 +455,6 @@ footer {
     animation-delay: 0.4s; /* Stagger animation */
 }
 
-/* Experience Section */
-.experience-timeline {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.experience-item {
-    display: flex;
-    margin-bottom: 40px;
-    background-color: var(--card-background);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-}
-
-.experience-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.experience-date {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-right: 20px;
-    align-self: flex-start;
-    min-width: 120px;
-    text-align: center;
-}
-
-.experience-content h3 {
-    font-family: var(--font-heading);
-    font-size: 1.3em;
-    margin-bottom: 5px;
-    color: var(--header-background);
-}
-
-.experience-content h4 {
-    font-size: 1.1em;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.experience-content p {
-    font-size: 0.95em;
-    line-height: 1.6;
-    margin: 0;
-}
 
 /* Responsive adjustments for new sections */
 @media (max-width: 768px) {
