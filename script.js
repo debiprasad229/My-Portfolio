@@ -49,11 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optional: Stop observing once it's visible if animation only happens once
-                // observer.unobserve(entry.target);
             } else {
-                // Optional: Remove 'is-visible' class if you want animation to reset on scroll out
-                // entry.target.classList.remove('is-visible');
+                               
             }
         });
     }, observerOptions);

@@ -1,12 +1,16 @@
 /* Basic Reset & Variables */
 :root {
-    --primary-color: #007bff; /* Blue */
-    --secondary-color: #6c757d; /* Gray */
-    --accent-color: #ffc107; /* Yellow */
+    --primary-color: #007bff;
+    /* Blue */
+    --secondary-color: #6c757d;
+    /* Gray */
+    --accent-color: #ffc107;
+    /* Yellow */
     --text-color: #333;
     --background-color: #f8f9fa;
     --card-background: #ffffff;
-    --header-background: #343a40; /* Dark gray for header/navbar */
+    --header-background: #343a40;
+    /* Dark gray for header/navbar */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Roboto', sans-serif;
 }
@@ -57,7 +61,8 @@ ul {
 }
 
 .primary-btn:hover {
-    background-color: #0056b3; /* Darker blue */
+    background-color: #0056b3;
+    /* Darker blue */
     transform: translateY(-2px);
 }
 
@@ -76,20 +81,24 @@ ul {
 
 /* --- Header / Hero Section --- */
 .hero-section {
-    background: var(--header-background); /* Dark background */
+    background: var(--header-background);
+    /* Dark background */
     color: #fff;
     text-align: center;
     padding: 100px 0;
     position: relative;
-    overflow: hidden; /* Hide overflow for potential background animations */
+    overflow: hidden;
+    /* Hide overflow for potential background animations */
 }
 
 .hero-title {
     font-family: var(--font-heading);
     font-size: 3em;
     margin-bottom: 10px;
-    opacity: 0; /* Will animate in with JS */
-    transform: translateY(20px); /* Will animate in with JS */
+    opacity: 0;
+    /* Will animate in with JS */
+    transform: translateY(20px);
+    /* Will animate in with JS */
 }
 
 .hero-title .highlight {
@@ -99,15 +108,21 @@ ul {
 .hero-subtitle {
     font-size: 1.2em;
     margin-bottom: 30px;
-    opacity: 0; /* Will animate in with JS */
-    transform: translateY(20px); /* Will animate in with JS */
-    animation-delay: 0.2s; /* Stagger animation */
+    opacity: 0;
+    /* Will animate in with JS */
+    transform: translateY(20px);
+    /* Will animate in with JS */
+    animation-delay: 0.2s;
+    /* Stagger animation */
 }
 
 .hero-section .btn {
-    opacity: 0; /* Will animate in with JS */
-    transform: translateY(20px); /* Will animate in with JS */
-    animation-delay: 0.4s; /* Stagger animation */
+    opacity: 0;
+    /* Will animate in with JS */
+    transform: translateY(20px);
+    /* Will animate in with JS */
+    animation-delay: 0.4s;
+    /* Stagger animation */
 }
 
 /* --- Navbar --- */
@@ -117,13 +132,13 @@ ul {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
 
 .navbar .container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -155,7 +170,7 @@ ul {
 }
 
 .nav-links a:hover::after,
-.nav-links a.active::after { 
+.nav-links a.active::after {
     width: 100%;
 }
 
@@ -169,7 +184,8 @@ ul {
     text-align: center;
 }
 
-.section:nth-of-type(even) { /* Alternate background for sections */
+.section:nth-of-type(even) {
+    /* Alternate background for sections */
     background-color: #e9ecef;
 }
 
@@ -201,6 +217,7 @@ ul {
     text-align: left;
     line-height: 1.8;
 }
+
 .about-content p {
     margin-bottom: 15px;
 }
@@ -220,7 +237,7 @@ ul {
     background-color: var(--card-background);
     padding: 15px 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-weight: bold;
     color: var(--primary-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -228,8 +245,9 @@ ul {
 
 .skill-item:hover {
     transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 /* Experience Section */
 .experience-timeline {
     max-width: 800px;
@@ -242,7 +260,7 @@ ul {
     margin-bottom: 40px;
     background-color: var(--card-background);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 25px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
@@ -250,7 +268,7 @@ ul {
 
 .experience-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .experience-date {
@@ -295,7 +313,7 @@ ul {
 .project-card {
     background-color: var(--card-background);
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -305,19 +323,19 @@ ul {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .project-thumbnail {
     width: 100%;
-    height: 200px; 
-    object-fit: cover; 
+    height: 200px;
+    object-fit: cover;
     display: block;
 }
 
 .project-info {
     padding: 20px;
-    flex-grow: 1; 
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
@@ -338,6 +356,53 @@ ul {
 .project-links .btn {
     font-size: 0.9em;
     padding: 8px 15px;
+}
+
+/* Certificates Section */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.certificate-item {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-icon {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.skill-item.learning {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.gcp-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #4285F4;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.gcp-btn:hover {
+    background: #3367D6;
+    transform: translateY(-2px);
 }
 
 /* Contact Section */
@@ -432,7 +497,8 @@ footer {
     }
 
     .project-grid {
-        grid-template-columns: 1fr; /* Stack projects on smaller screens */
+        grid-template-columns: 1fr;
+        /* Stack projects on smaller screens */
     }
 
     .contact-links {
@@ -450,15 +516,14 @@ footer {
 }
 
 .hero-buttons .btn {
-    opacity: 0; /* Will animate in with JS */
-    transform: translateY(20px); /* Will animate in with JS */
-    animation-delay: 0.4s; /* Stagger animation */
+    opacity: 0;
+    /* Will animate in with JS */
+    transform: translateY(20px);
+    /* Will animate in with JS */
+    animation-delay: 0.4s;
+    /* Stagger animation */
 }
-
-
-/* Responsive adjustments for new sections */
-@media (max-width: 768px) {
-    .hero-buttons {
+   .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: 15px;
@@ -473,5 +538,50 @@ footer {
         margin-right: 0;
         margin-bottom: 15px;
         align-self: center;
+    }
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 6px;
+    margin-right: auto;
+}
+.menu-toggle span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Show hamburger and dropdown nav on mobile */
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 40vh;
+        background: var(--header-background);
+        position: absolute;
+        top: 50px;
+        gap: 25px;
+        z-index: 1;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .navbar .container {
+        position: relative;
     }
 }
