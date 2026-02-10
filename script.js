@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
             } else {
-                               
+
             }
         });
     }, observerOptions);
@@ -108,20 +108,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initialize active state on page load based on URL hash (if any)
-    if (window.location.hash) {
-        updateNavLinkActiveState(window.location.hash);
-        // Also scroll to the hash if page reloaded there
-        const targetElement = document.querySelector(window.location.hash);
-        if (targetElement) {
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-            const offsetTop = targetElement.offsetTop - navbarHeight;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'instant' // Use instant to avoid double scroll
+    // Initialize active state on page load
+    const handleInitialScrollState = () => {
+        // If there's a hash, respect it
+        if (window.location.hash) {
+            updateNavLinkActiveState(window.location.hash);
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                const offsetTop = targetElement.offsetTop - navbarHeight;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'instant'
+                });
+            }
+        } else {
+            // Check scroll position to determine active section
+            let currentActiveSection = '#about'; // Default
+
+            // Check if we are already scrolled down (browser restoration)
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - navbar.offsetHeight - 50;
+                const sectionHeight = section.clientHeight;
+
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentActiveSection = '#' + section.id;
+                }
             });
+            updateNavLinkActiveState(currentActiveSection);
         }
-    } else {
-        // Set About as active if no hash
-        updateNavLinkActiveState('#about');
+    };
+
+    // Run slightly after load to allow browser scroll restoration
+    setTimeout(handleInitialScrollState, 50);
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinksContainer = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinksContainer) {
+        menuToggle.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('open');
+            menuToggle.classList.toggle('open');
+        });
     }
 });
